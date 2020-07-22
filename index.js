@@ -8,8 +8,6 @@ const cors = require('cors');
 
 const app = express();
 
-require('./src/routes/products')(app);
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
@@ -17,6 +15,8 @@ app.use(cors());
 app.get('/', (req, res) => {
   res.send('price-checker-backend is working!');
 });
+
+require('./src/routes/products')(app);
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT);
