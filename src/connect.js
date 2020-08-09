@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 mongoose
   .connect(
-    `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@main-ogevx.mongodb.net/main?retryWrites=true&w=majority`,
+    `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@main-ogevx.mongodb.net/pcgarage?retryWrites=true&w=majority`,
     { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }
   )
   .then(() => console.log('DB Connected!'))
